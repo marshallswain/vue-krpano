@@ -13,7 +13,9 @@ let component = {
 
     mixins: [core, lazyLoad, freezeVertical],
 
-    template: "<div class='vue-krpano'></div>",
+    render: function (createElement) {
+        return createElement('div', { staticClass: 'vue-krpano' });
+    },
 
     mounted(){
         this.createPano();
